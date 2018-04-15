@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <button menuToggle ion-button icon-only>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-buttons end>
+          <button ion-button icon-only (click)="logOut()">
+            <ion-icon name="log-out"></ion-icon>
+          </button>
+    </ion-buttons>
+    <ion-title  ><h1 style="font-weight: bolder; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">FoodFeed</h1></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let card of posts | async">
+    <ion-card-content>
+      <ion-card-title style="font-weight:bold">
+        {{card.title}}
+      </ion-card-title>
+      <h2 style="font-style:italic">{{card.itemName}}</h2>
+      <img src="{{defaultImageUrl}}" class="img-adjust">
+      <p>
+        {{card.itemDescription}}
+      </p>
+      <h4>{{card.itemComments}}</h4>
+      <br>
+      <button ion-button icon-only>
+          <ion-icon name="thumbs-up" ion-buttons>  
+          </ion-icon>
+      </button>
+      <button ion-button icon-only>
+          <ion-icon name="chatboxes" ion-buttons>  
+          </ion-icon>
+      </button>
+
+    </ion-card-content>
+    <button ion-button clear card-right> View </button>
+
+  </ion-card>
+  
+</ion-content>

@@ -1,0 +1,31 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Post</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Title</ion-label>
+      <ion-input type="text" [(ngModel)]="post.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Food Name</ion-label>
+      <ion-input type="text" [(ngModel)]="post.itemName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Food Description</ion-label>
+      <ion-input type="text" [(ngModel)]="post.itemDescription"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Comments</ion-label>
+      <ion-input type="text" [(ngModel)]="post.itemComments"></ion-input>
+    </ion-item>
+    <button ion-button full (click)="submit()">Submit</button>
+  </ion-list>
+</ion-content>
